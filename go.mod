@@ -1,6 +1,7 @@
 module github.com/stephencheng/yq/v3
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/fatih/color v1.9.0
 	github.com/goccy/go-yaml v1.3.2
 	github.com/kylelemons/godebug v1.1.0

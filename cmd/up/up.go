@@ -8,13 +8,13 @@ import (
 	logging "gopkg.in/op/go-logging.v1"
 )
 
-var(
-	p=fmt.Println
+var (
+	p = fmt.Println
 )
 
 func main() {
-	maintest()
-	//cmd.CreateUpCmd()
+	//maintest()
+	svctest()
 }
 
 func maintest() {
@@ -24,4 +24,9 @@ func maintest() {
 		log.Error(err.Error())
 		os.Exit(1)
 	}
+}
+
+func svctest() {
+	//log := logging.MustGetLogger("yq")
+	cmd.UpReadYml("vvv")
 }
