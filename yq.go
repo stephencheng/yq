@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	command "github.com/mikefarah/yq/v3/cmd"
+	command "github.com/stephencheng/yq/v3/cmd"
 	logging "gopkg.in/op/go-logging.v1"
 )
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/kylelemons/godebug/diff"
-	"github.com/mikefarah/yq/v3/pkg/yqlib"
+	"github.com/stephencheng/yq/v3/pkg/yqlib"
 	errors "github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

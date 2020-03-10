@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/mikefarah/yq/v3/pkg/yqlib"
+	"github.com/stephencheng/yq/v3/pkg/yqlib"
 	errors "github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
