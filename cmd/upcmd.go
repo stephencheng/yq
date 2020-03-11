@@ -38,7 +38,8 @@ func UpCmd() *cobra.Command {
 
 	//p("verbose:", rootCmd.Flag("verbose").Value)
 	rootCmd.AddCommand(
-		CreateUpCmd(),
+		CreateUpReadCmd(),
+		createUpValidateCmd(),
 	)
 	rootCmd.SetOutput(os.Stdout)
 

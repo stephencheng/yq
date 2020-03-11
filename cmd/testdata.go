@@ -1,12 +1,7 @@
 package cmd
 
-import (
-	"fmt"
-	"testing"
-)
-
 var (
-	ymlstr = `
+	TestYmlStr = `
 notes:
  goal:
    - to test using a simpler mode of data structure for tasks using array
@@ -55,42 +50,3 @@ tasks:
 
 `
 )
-
-func TestUpReadYml01(t *testing.T) {
-	var path = "tasks.**.task"
-	result, _ := UpReadYml(ymlstr, path, "vvv")
-	fmt.Println(result)
-}
-
-func TestUpReadYml02(t *testing.T) {
-	var path = "tasks.[1]"
-	result, _ := UpReadYml(ymlstr, path, "vvv")
-	fmt.Println(result)
-}
-
-func TestUpReadYml03(t *testing.T) {
-	var path = "tasks.[*]"
-	result, _ := UpReadYml(ymlstr, path, "vvv")
-	fmt.Println(result)
-}
-
-func TestUpReadYml04(t *testing.T) {
-	var path = "tasks(name==task2)"
-	result, _ := UpReadYml(ymlstr, path, "vvv")
-	fmt.Println(result)
-}
-
-func TestUpReadYml05(t *testing.T) {
-	var path = "tasks(name==task*)"
-	UpReadYml(ymlstr, path, "vvvv")
-}
-
-func TestUpReadYml06(t *testing.T) {
-	var path = "tasks(name==task*).desc"
-	UpReadYml(ymlstr, path, "vvvv")
-}
-
-func TestUpReadYml07(t *testing.T) {
-	var path = "tasks(name==task*).task(func==cmd)"
-	UpReadYml(ymlstr, path, "vvvv")
-}
