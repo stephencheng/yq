@@ -1,6 +1,7 @@
 package cmd
 
-func UpReadYmlFile(filepath, epath, logLevel string) (string, error) {
+func UpReadYmlFile(filepath, epath, logLevel string, toArray bool) (string, error) {
+	collectIntoArray = toArray
 	SetLogLevel(logLevel)
 	var updateAll, docIndexInt, errorParsingDocIndex = parseDocumentIndex()
 	if errorParsingDocIndex != nil {
@@ -19,7 +20,8 @@ func UpReadYmlFile(filepath, epath, logLevel string) (string, error) {
 	return readResult, err
 }
 
-func UpReadYmlStr(ymlstr, epath, logLevel string) (string, error) {
+func UpReadYmlStr(ymlstr, epath, logLevel string, toArray bool) (string, error) {
+	collectIntoArray = toArray
 	SetLogLevel(logLevel)
 	var updateAll, docIndexInt, errorParsingDocIndex = parseDocumentIndex()
 	if errorParsingDocIndex != nil {

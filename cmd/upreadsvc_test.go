@@ -14,47 +14,61 @@ func init() {
 
 func TestUpReadYml01(t *testing.T) {
 	var path = "tasks.**.task"
-	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv")
+	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv", false)
 	fmt.Println(result)
 }
 
 func TestUpReadYml02(t *testing.T) {
 	var path = "tasks.[1]"
-	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv")
+	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv", false)
 	fmt.Println(result)
 }
 
 func TestUpReadYml03(t *testing.T) {
 	var path = "tasks.[*]"
-	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv")
+	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv", false)
 	fmt.Println(result)
 }
 
 func TestUpReadYml04(t *testing.T) {
 	var path = "tasks(name==task2)"
-	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv")
+	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv", false)
 	fmt.Println(result)
 }
 
 func TestUpReadYml05(t *testing.T) {
 	var path = "tasks(name==task*)"
-	UpReadYmlStr(TestYmlStr, path, "vvvv")
+	UpReadYmlStr(TestYmlStr, path, "vvvv", false)
 }
 
 func TestUpReadYml06(t *testing.T) {
 	var path = "tasks(name==task*).desc"
-	UpReadYmlStr(TestYmlStr, path, "vvvv")
+	UpReadYmlStr(TestYmlStr, path, "vvvv", false)
 }
 
 func TestUpReadYml07(t *testing.T) {
 	var path = "tasks(name==task*).task(func==cmd)"
-	UpReadYmlStr(TestYmlStr, path, "vvvv")
+	UpReadYmlStr(TestYmlStr, path, "vvvv", false)
+}
+
+//test read and collect into array
+func TestUpReadYml08(t *testing.T) {
+	var path = "tasks.**.desc"
+	result, _ := UpReadYmlStr(TestYmlStr, path, "vvv", true)
+	fmt.Println(result)
 }
 
 func TestUpReadYmlFile01(t *testing.T) {
 	dir, _ := os.Getwd()
 	p("pwd:", dir)
 	var path = "tasks.**.task"
-	result, _ := UpReadYmlFile("./test/uptestdata.yml", path, "vvvv")
+	result, _ := UpReadYmlFile("./test/uptestdata.yml", path, "vvvv", false)
+	fmt.Println(result)
+}
+func TestUpReadYmlFile02(t *testing.T) {
+	dir, _ := os.Getwd()
+	p("pwd:", dir)
+	var path = "tasks.**.task"
+	result, _ := UpReadYmlFile("./test/uptestdata.yml", path, "vvvv", true)
 	fmt.Println(result)
 }

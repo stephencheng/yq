@@ -38,6 +38,9 @@ func readTest() {
 }
 
 func validateTest() {
+	//run it in ide
 	err := cmd.UpValidateYmlFile("./test/uptestdata.yml", "vvv")
+	//run it in command line
+	//err := cmd.UpValidateYmlFile("../../test/uptestdata.yml", "vvv")
 	fmt.Println(err)
 }

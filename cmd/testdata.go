@@ -49,4 +49,15 @@ tasks:
          - echo "world"|grep non-exist
 
 `
+
+	TestYmlStr2 = `
+name: Fred
+age: 22
+---
+name: Stella
+age: 23
+---
+name: Android
+age: 232
+`
 )
