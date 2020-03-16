@@ -5,8 +5,8 @@ package main
 // 	"runtime"
 // 	"testing"
 
-// 	"github.com/mikefarah/yq/v2/pkg/marshal"
-// 	"github.com/mikefarah/yq/v2/test"
+// 	"github.com/stephencheng/yq/v2/pkg/marshal"
+// 	"github.com/stephencheng/yq/v2/test"
 // )
 
 // func TestMultilineString(t *testing.T) {

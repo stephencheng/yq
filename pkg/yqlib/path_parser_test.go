@@ -3,7 +3,7 @@ package yqlib
 import (
 	"testing"
 
-	"github.com/mikefarah/yq/v3/test"
+	"github.com/stephencheng/yq/v3/test"
 )
 
 var parser = NewPathParser()
