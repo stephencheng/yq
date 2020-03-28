@@ -58,6 +58,22 @@ func TestUpReadYml08(t *testing.T) {
 	fmt.Println(result)
 }
 
+func TestUpReadYml09(t *testing.T) {
+	UpReadYmlStr(TestYmlStr3, "nsw.sydney.[1].*(name==Emily)", "vvvv", false)
+}
+
+func TestUpReadYml10(t *testing.T) {
+	UpReadYmlStr(TestYmlStr3, "nsw.sydney.**(name==Emily)", "vvvv", false)
+}
+
+func TestUpReadYml11(t *testing.T) {
+	UpReadYmlStr(TestYmlStr3, "nsw.sydney.[*].kings(name==Emily)", "vvvv", false)
+}
+
+func TestUpReadYml12(t *testing.T) {
+	UpReadYmlStr(TestYmlStr3, "nsw.sydney.[*].*(name==Grace)", "vvvv", false)
+}
+
 func TestUpReadYmlFile01(t *testing.T) {
 	dir, _ := os.Getwd()
 	p("pwd:", dir)

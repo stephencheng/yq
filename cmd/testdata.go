@@ -60,4 +60,21 @@ age: 23
 name: Android
 age: 232
 `
+
+	TestYmlStr3 = `
+nsw:
+  sydney:
+    -
+      sg:
+        student:
+          name: Grace
+          gender: Female
+          school: MLC
+    -
+      kings:
+        student:
+          name: Emily
+          gender: Female
+          school: KINGS
+`
 )
