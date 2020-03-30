@@ -16,9 +16,10 @@ func main() {
 	p("=======test yml file==========")
 	//p(cmd.TestYmlStr)
 	p("==============================")
-	//roottest()
+	roottest()
 	//readTest()
-	validateTest()
+	//validateTest()
+	//validateTest()
 	p("==============================")
 }
 
@@ -33,7 +34,7 @@ func roottest() {
 
 func readTest() {
 	var path = "tasks.**.task"
-	result, _ := cmd.UpReadYmlStr(cmd.TestYmlStr, path, "vvv")
+	result, _ := cmd.UpReadYmlStr(cmd.TestYmlStr, path, "vvv", false)
 	fmt.Println(result)
 }
 

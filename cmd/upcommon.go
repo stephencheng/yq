@@ -10,6 +10,12 @@ var (
 	p = fmt.Println
 )
 
+func init() {
+	//working dir is proj/cmd
+	//this init applies once for all in the same pkg
+	os.Chdir("..")
+}
+
 func SetLogLevel(level string) {
 	var format = logging.MustStringFormatter(
 		`%{color}%{time:15:04:05} %{shortfunc} [%{level:.4s}]%{color:reset} %{message}`,
@@ -35,4 +41,15 @@ func SetLogLevel(level string) {
 	backend.SetLevel(logLevel, "")
 	logging.SetBackend(backend)
 
+}
+
+type YmlResultWriter struct {
+	Buf    *[]byte
+	Result string
+}
+
+func (yml *YmlResultWriter) Write(data []byte) (n int, err error) {
+	yml.Buf = &data
+	yml.Result = string(data)
+	return len(data), nil
 }

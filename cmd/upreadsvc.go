@@ -13,7 +13,7 @@ func UpReadYmlFile(filepath, epath, logLevel string, toArray bool) (string, erro
 	if errorReadingStream != nil {
 		return "", errorReadingStream
 	}
-	var buf YmlResult
+	var buf YmlResultWriter
 	err := printResults(matchingNodes, &buf)
 
 	log.Infof("read result: \n%s", buf.Result)
@@ -32,20 +32,9 @@ func UpReadYmlStr(ymlstr, epath, logLevel string, toArray bool) (string, error) 
 	if errorReadingStream != nil {
 		return "", errorReadingStream
 	}
-	var buf YmlResult
+	var buf YmlResultWriter
 	err := printResults(matchingNodes, &buf)
 
 	log.Infof("read result: \n%s", buf.Result)
 	return buf.Result, err
-}
-
-type YmlResult struct {
-	Buf    *[]byte
-	Result string
-}
-
-func (yml *YmlResult) Write(data []byte) (n int, err error) {
-	yml.Buf = &data
-	yml.Result = string(data)
-	return len(data), nil
 }

@@ -40,6 +40,7 @@ func UpCmd() *cobra.Command {
 	rootCmd.AddCommand(
 		CreateUpReadCmd(),
 		createUpValidateCmd(),
+		createUpDeleteCmd(),
 	)
 	rootCmd.SetOutput(os.Stdout)
 
