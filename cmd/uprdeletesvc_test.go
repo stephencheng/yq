@@ -26,7 +26,7 @@ emily:
 
 func TestUpDeletePathFromFile001(t *testing.T) {
 	ioutil.WriteFile(filepath, []byte(mock_delete_yml), 0644)
-	result, err := UpDeletePathFromFile(filepath, "jason.sex", "v")
+	result, err := UpDeletePathFromFile(filepath, "jason.sex", false, "v")
 	fmt.Println(err)
 	fmt.Printf("result:\n--------\n%s\n--------\n", result)
 
@@ -38,7 +38,7 @@ func TestUpDeletePathFromFile002(t *testing.T) {
 	//in place delete: directly delete from file
 	writeInplace = true
 	ioutil.WriteFile(filepath, []byte(mock_delete_yml), 0644)
-	result, err := UpDeletePathFromFile(filepath, "jason.sex", "v")
+	result, err := UpDeletePathFromFile(filepath, "jason.sex", false, "v")
 	fmt.Println(err)
 	fmt.Printf("result:\n--------\n%s\n--------\n", result)
 
@@ -49,7 +49,7 @@ func TestUpDeletePathFromFile002(t *testing.T) {
 func TestUpDeletePathFromFile003(t *testing.T) {
 	writeInplace = true
 	ioutil.WriteFile(filepath, []byte(mock_delete_yml), 0644)
-	result, err := UpDeletePathFromFile(filepath, "tom", "v")
+	result, err := UpDeletePathFromFile(filepath, "tom", false, "v")
 	fmt.Println(err)
 	fmt.Printf("result:\n--------\n%s\n--------\n", result)
 
@@ -59,9 +59,8 @@ func TestUpDeletePathFromFile003(t *testing.T) {
 
 func TestUpDeletePathFromFile004(t *testing.T) {
 	//loglevel to vvvv
-	writeInplace = true
 	ioutil.WriteFile(filepath, []byte(mock_delete_yml), 0644)
-	result, err := UpDeletePathFromFile(filepath, "tom", "vvvvv")
+	result, err := UpDeletePathFromFile(filepath, "tom", true, "vvvvv")
 	fmt.Println(err)
 	fmt.Printf("result:\n--------\n%s\n--------\n", result)
 
