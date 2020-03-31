@@ -10,12 +10,6 @@ var (
 	p = fmt.Println
 )
 
-func init() {
-	//working dir is proj/cmd
-	//this init applies once for all in the same pkg
-	os.Chdir("..")
-}
-
 func SetLogLevel(level string) {
 	var format = logging.MustStringFormatter(
 		`%{color}%{time:15:04:05} %{shortfunc} [%{level:.4s}]%{color:reset} %{message}`,
