@@ -67,3 +67,14 @@ func TestUpDeletePathFromFile004(t *testing.T) {
 	content, err := ioutil.ReadFile(filepath)
 	fmt.Printf("read file result:\n--------\n%s\n--------\n", string(content))
 }
+
+//if it is in place, the result will be empty
+func TestUpDeletePathFromFile005(t *testing.T) {
+	ioutil.WriteFile(filepath, []byte(mock_delete_yml), 0644)
+	result, err := UpDeletePathFromFile(filepath, "jason.sex", true, "v")
+	fmt.Println(err)
+	fmt.Printf("result:\n--------\n%s\n--------\n", result)
+
+	content, err := ioutil.ReadFile(filepath)
+	fmt.Println(string(content))
+}
