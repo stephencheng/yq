@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/stephencheng/yq/v3/cmd"
+	"github.com/upcmd/yq/v3/cmd"
 	"os"
 
 	logging "gopkg.in/op/go-logging.v1"

@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/stephencheng/yq/v3/pkg/yqlib"
+	"github.com/upcmd/yq/v3/pkg/yqlib"
 	yaml "gopkg.in/yaml.v3"
 	"io"
 	"strings"

@@ -3,7 +3,7 @@ package cmd
 import (
 	errors "github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"github.com/stephencheng/yq/v3/pkg/yqlib"
+	"github.com/upcmd/yq/v3/pkg/yqlib"
 )
 
 func createUpDeleteCmd() *cobra.Command {

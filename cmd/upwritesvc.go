@@ -3,7 +3,7 @@ package cmd
 import (
 	"bufio"
 	errors "github.com/pkg/errors"
-	"github.com/stephencheng/yq/v3/pkg/yqlib"
+	"github.com/upcmd/yq/v3/pkg/yqlib"
 	"gopkg.in/yaml.v3"
 	"io"
 )

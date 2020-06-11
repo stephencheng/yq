@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/spf13/cobra"
-	"github.com/stephencheng/yq/v3/test"
+	"github.com/upcmd/yq/v3/test"
 )
 
 func getRootCommand() *cobra.Command {

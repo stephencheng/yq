@@ -8,8 +8,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/stephencheng/yq/v3/pkg/yqlib"
 	errors "github.com/pkg/errors"
+	"github.com/upcmd/yq/v3/pkg/yqlib"
 	yaml "gopkg.in/yaml.v3"
 )
 

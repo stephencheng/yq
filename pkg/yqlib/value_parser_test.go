@@ -3,7 +3,7 @@ package yqlib
 import (
 	"testing"
 
-	"github.com/stephencheng/yq/v3/test"
+	"github.com/upcmd/yq/v3/test"
 	yaml "gopkg.in/yaml.v3"
 )
 

@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/stephencheng/yq/v3/pkg/yqlib"
+	"github.com/upcmd/yq/v3/pkg/yqlib"
 )
 
 func UpDeletePathFromFile(filepath, elepath string, inplace bool, logLevel string) (string, error) {

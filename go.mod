@@ -1,4 +1,4 @@
-module github.com/stephencheng/yq/v3
+module github.com/upcmd/yq/v3
 
 require (
 	github.com/davecgh/go-spew v1.1.1

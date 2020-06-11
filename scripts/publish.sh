@@ -4,7 +4,7 @@ GITHUB_TOKEN="${GITHUB_TOKEN:?missing required input \'GITHUB_TOKEN\'}"
 
 CURRENT="$(git describe --tags --abbrev=0)"
 PREVIOUS="$(git describe --tags --abbrev=0 --always "${CURRENT}"^)"
-OWNER="stephencheng"
+OWNER="upcmd"
 REPO="yq"
 
 release() {

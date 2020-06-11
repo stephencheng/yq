@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"github.com/stephencheng/yq/v3/pkg/yqlib"
 	errors "github.com/pkg/errors"
 	"github.com/spf13/cobra"
+	"github.com/upcmd/yq/v3/pkg/yqlib"
 )
 
 func createDeleteCmd() *cobra.Command {
